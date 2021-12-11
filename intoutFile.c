@@ -69,7 +69,6 @@ void text_grid(char *filename, GRID **Graph){
 }
 
 void shortest_save_to_file(int *shortest, char *filename){
-    int i;
     FILE *fp = NULL;
     fp = fopen(filename, "wb");
 

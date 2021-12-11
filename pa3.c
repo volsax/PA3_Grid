@@ -19,7 +19,6 @@ void get_shortest_path(int *parent, int j, int *path_idx){
 void path_save_to_file(char *filename, int *idx, int min, GRID **Ingrid){
     FILE *fp = NULL;
     short i, j, g;
-    int number = sizeof(idx)/4; //number of the path passing
 
     fp = fopen(filename, "wb");
 
@@ -51,7 +50,7 @@ int *adjust_distance(GRID **input, int *dist){
 int main(int argc, char *argv[]){
     GRID **ingrid = NULL;
     short **adj_matrix = NULL;
-    int minTop, minBottom;
+    int minTop = 0, minBottom = 0;
     int i, min = INT_MAX;
     
 

@@ -87,7 +87,7 @@ short **create_adajency_matrix(GRID **graph){
 
 static int min_distance(int *dist, short *sptSet){
     int size = r*c;
-    int min = INT_MAX, idx, v;
+    int min = INT_MAX, idx = 0, v;
     for(v=0; v<size; v++){
         if(sptSet[v]==0 && dist[v]<=min){
             min = dist[v];
@@ -138,7 +138,7 @@ int find_fastest(int *distance){
 
 int find_bottom(int *distance){
     int size = r*c;
-    int min = INT_MAX, i, idx;
+    int min = INT_MAX, i, idx = 0;
     for(i=size-1; i>size-1-c; i--){
         if(distance[i]<min){
             min = distance[i];
